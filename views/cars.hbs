@@ -1,0 +1,21 @@
+{{# each arrayOfAdsData}}
+<div style="border: 1px solid black;">
+    <div class="info_block i1">
+        <p class="heading">{{this.carMark}} {{this.carModel}}</p>
+        <p class="cost">{{this.costBYN}}</p>
+        <p>{{this.year}}</p>
+        <p>{{this.mileage}}</p>
+    </div>
+    <div class="info_block i2">
+        <p>{{this.engineСapacity}} / {{this.enginePower}} / {{this.fuelType}}</p>
+        <p>{{this.driveUnit}}</p>
+    </div>
+    <div class="info_block i3">
+        <p>{{this.transmission}}</p>
+        <p>{{this.color}}</p>
+    </div>
+    <div class="info_block i4">
+        <p>{{this.bodyType}}</p>
+    </div>
+</div>
+{{/each}}
