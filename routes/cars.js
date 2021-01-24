@@ -1,12 +1,15 @@
 let express = require('express');
 let router = express();
-let store = require('../store');
+const isAuth = require('../auth');
 
-router.get('/all', function(req, res) {
-  res.render('cars', {
-      title: 'Все тачки',
-      arrayOfAdsData: store.ads
-  });
-});
+const carsController = require('../controllers/carsController');
+
+router.get('/all', isAuth, carsController.allCarsAdsList);
+
+router.get('/:car_mark/all', isAuth, carsController.specifiedCarsAdsList);
+
+router.get('/add', isAuth, carsController.showAdCreator);
+
+router.post('/add', isAuth, carsController.addAd);
 
 module.exports = router;

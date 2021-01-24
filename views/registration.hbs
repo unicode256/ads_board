@@ -1,0 +1,21 @@
+<form method="POST" action="/registration">
+    <label for="name">Имя</label>
+    <input id="name" type="text" name="name"><br>
+    <label for="city">Город</label>
+    <input id="city" type="text" name="city"><br>
+    <label for="phone_number">Номер телефона</label>
+    <input id="phone_number" type="text" name="phone_number"><br>
+    <label for="email">Адрес почты</label>
+    <input id="email" type="text" name="email"><br>
+    <label for="password">Пароль</label>
+    <input id="password" type="text" name="password"><br>
+    <input type="submit" value="Зарегистриоваться">
+</form>
+{{#if message}}
+<span style="color: green">{{message}}</span>
+{{else}}
+{{/if}}
+{{#if error}}
+<span style="color: red">{{error}}</span>
+{{else}}
+{{/if}}

@@ -1,0 +1,139 @@
+<h2>Новое объявление</h2>
+<form method="POST" action="/cars/add">
+    <label for="name">Марка автомобиля:</label>
+    <select id="car_mark" name="car_mark_id">{{{carMarks}}}</select><br>
+
+    <label for="car_model">Модель:</label>
+    <select id="car_model" type="text" name="car_model_id">{{{carModels}}}</select><br>
+
+    <label for="car_generation">Поколение:</label>
+    <input id="car_generation" type="text" name="car_generation_id"><br>
+
+    <label for="year">Год выпуска:</label>
+    <input id="year" type="text" name="year"><br>
+
+    <label for="body_type">Тип кузова:</label>
+    <select id="body_type" name="body_type_id">{{{bodyTypes}}}</select><br>
+
+    <p>Состояние:</p>
+    <p><input id="state" type="radio" name="state_id" value="1">С пробегом</p><br>
+    <p><input id="state" type="radio" name="state_id" value="2">С повреждениями</p><br>
+    <p><input id="state" type="radio" name="state_id" value="3">На запчасти</p><br>
+
+    <label for="cost">Цена:</label>
+    <input id="cost" type="text" name="cost"><br>
+
+    <label for="currency">Валюта:</label>
+    <select id="currency" name="currency_id">{{{currencies}}}</select><br>
+
+    <label for="text">Текст объявления:</label>
+    <input id="text" type="text" name="text"><br>
+
+    <p>Тип двигателя:</p>
+    <p><input id="type_of_fuel" type="radio" name="type_of_fuel_id" value="1">Бензин</p><br>
+    <p><input id="type_of_fuel" type="radio" name="type_of_fuel_id" value="2">Дизель</p><br>
+    <p><input id="type_of_fuel" type="radio" name="type_of_fuel_id" value="3">Электро</p><br>
+
+    <p><input type="checkbox" name="is_hybrid" value="1">Гибрид</p>
+    <p><input type="checkbox" name="is_propan" value="1">Газовое оборудование(пропан)</p>
+    <p><input type="checkbox" name="is_metan" value="1">Газовое оборудование(метан)</p>
+
+
+    <label for="engine_capacity">Объем, куб.см:</label>
+    <input id="engine_capacity" type="text" name="engine_capacity"><br>
+
+    <label for="engine_power">Объем, куб.см:</label>
+    <input id="engine_power" type="text" name="engine_power"><br>
+
+    <label for="mileage">Пробег:</label>
+    <input id="mileage" type="text" name="mileage"><br>
+
+    <label for="measurment">Единица измерения:</label>
+    <select id="measurment" name="measurment">
+        <option value="km">километры</option>
+        <option value="m">мили</option>
+    </select><br>
+
+    <p>Трансмиссия:</p>
+    <p><input id="transmission_type" type="radio" name="transmission_type_id" value="1">Механическая</p><br>
+    <p><input id="transmission_type" type="radio" name="transmission_type_id" value="2">Автоматическая</p><br>
+    <p><input id="transmission_type" type="radio" name="transmission_type_id" value="3">Робот</p><br>
+    <p><input id="transmission_type" type="radio" name="transmission_type_id" value="3">Вариатор</p><br>
+    
+    <label for="drive_unit">Тип привода:</label>
+    <select id="drive_unit" name="drive_unit_id">{{{driveUnits}}}</select><br>
+
+    <label for="color">Цвет:</label>
+    <select id="color" name="color_id">{{{colors}}}</select><br>
+
+    <label for="interior_trim_material">Материал отделки салона:</label>
+    <select id="interior_trim_material" name="interior_trim_material_id">{{{interiorTrimMaterials}}}</select><br>
+
+    <label for="interior_color">Цвет салона:</label>
+    <select id="interior_color" name="interior_color_id">{{{interiorColors}}}</select><br>
+
+    <label for="exchange">Обмен:</label>
+    <select id="exchange" name="exchange_id">{{{exchangeVariants}}}</select><br>
+
+    <label for="vin">VIN номер:</label>
+    <input id="vin" type="text" name="vin"><br>
+
+    <p><input type="checkbox" name="is_abs" value="1">ABS</p>
+    <p><input type="checkbox" name="is_esp" value="1">ESP</p>
+    <p><input type="checkbox" name="is_traction_control" value="1">Антипробуксовочная</p>
+    <p><input type="checkbox" name="is_immobilizer" value="1">Иммобилайзер</p>
+    <p><input type="checkbox" name="is_side_airbags" value="1">Подушки бок</p>
+    <p><input type="checkbox" name="is_rear_airbags" value="1">Подушки зад</p>
+    <p><input type="checkbox" name="is_front_airbags" value="1">Подушки перед</p>
+    <p><input type="checkbox" name="is_signaling" value="1">Сигнализация</p>
+
+    <p><input type="checkbox" name="is_luke" value="1">Люк</p>
+    <p><input type="checkbox" name="is_panoramic_roof" value="1">Панорамная крыша</p>
+
+    <p><input type="checkbox" name="is_heater" value="1">Печка</p>
+    <p><input type="checkbox" name="is_climate_control" value="1">Климат контроль</p>
+    <p><input type="checkbox" name="is_air_conditioning" value="1">Кондиционер</p>
+    <p><input type="checkbox" name="is_heated_mirrors" value="1">Обогрев зеркал</p>
+    <p><input type="checkbox" name="is_windshield_heating" value="1">Обогрев лобаша</p>
+    <p><input type="checkbox" name="is_steering_wheel_heating" value="1">Обогрев руля</p>
+    <p><input type="checkbox" name="is_seat_heating" value="1">Обогрев сидений</p>
+
+    <p><input type="checkbox" name="is_engine_autostart" value="1">Автозапуск двигла</p>
+    <p><input type="checkbox" name="is_cruise_control" value="1">Круиз</p>
+    <p><input type="checkbox" name="is__multimedia_steering_wheel_control" value="1">Руль с кнопками</p>
+    <p><input type="checkbox" name="is_power_seats" value="1">Электрорегулировка сидений</p>
+    <p><input type="checkbox" name="is_rear_power_windows" value="1">Электросеклоподъёмники задние</p>
+    <p><input type="checkbox" name="is_front_power_windows" value="1">Электросеклоподъёмники передние</p>
+
+    <p><input type="checkbox" name="is_aux_ipod" value="1">Aux/iPod</p>
+    <p><input type="checkbox" name="is_bluetooth" value="1">Bluetooth</p>
+    <p><input type="checkbox" name="is_cd_mp3" value="1">CD/MP3</p>
+    <p><input type="checkbox" name="is_usb" value="1">USB</p>
+    <p><input type="checkbox" name="is_multimedia_screen" value="1">Монитор</p>
+    <p><input type="checkbox" name="is_native_navigation" value="1">Навигация</p>
+
+    <p><input type="checkbox" name="is_xenon_headlights" value="1">Ксенон</p>
+    <p><input type="checkbox" name="is_fog_lights" value="1">Противотуманки</p>
+    <p><input type="checkbox" name="is_led_headlights" value="1">Диодные фары</p>
+
+    <p><input type="checkbox" name="is_rain_sensor" value="1">Датчик дождя</p>
+    <p><input type="checkbox" name="" value="1">Камера заднего вида</p>
+    <p><input type="checkbox" name="" value="1">Контроль мертвых зон</p>
+    <p><input type="checkbox" name="" value="1">Парктроники</p>
+
+    <p><input type="checkbox" name="" value="1">Диски</p>
+    <p><input type="checkbox" name="" value="1">Рейлинги</p>
+    <p><input type="checkbox" name="" value="1">Фаркоп</p>
+
+    <label for="region">Область:</label>
+    <select id="region" name="region_id">{{{regions}}}</select><br>
+
+    <label for="city">Город:</label>
+    <select id="city" name="city_id">{{{cities}}}</select><br>
+
+    <p><input type="checkbox" name="phone_number_is_shown" value="1" checked>Показывать номер телефона в объявлении</p>
+
+    <input type="submit" value="Опубликовать">
+</form>
+<script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+<script src="../public/js/query.js" type="text/javascript"></script>

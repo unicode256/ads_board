@@ -1,0 +1,11 @@
+<form method="POST" action="/login">
+    <label for="email">Адрес почты</label>
+    <input id="email" type="text" name="email"><br>
+    <label for="password">Пароль</label>
+    <input id="password" type="text" name="password"><br>
+    <input type="submit" value="Войти">
+</form>
+{{#if error}}
+<span style="color: red">{{error}}</span>
+{{else}}
+{{/if}}

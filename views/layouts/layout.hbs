@@ -7,6 +7,11 @@
         <a href="/cars/all">Все тачки</a>
         <a href="/cars/new">Новые</a>
         <a href="/cars/used">С пробегом</a>
+        {{#if isAuth}}
+        <span>Вы вошли</span>
+        <a href="/logout">Выйти</a>
+        {{else}}
+        {{/if}}
         {{{body}}}
     </body>
 </html>
